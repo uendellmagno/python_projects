@@ -21,9 +21,7 @@ def greetings():
 
 def type_selection():
     t.sleep(1)
-    print(
-        "You want to work with Miles or Kilometers?\n- For miles, type 0\n- For kilometers, type 1"
-    )
+    print("You want to work with Miles or Kilometers?\n- For miles, type 0\n- For kilometers, type 1")
     try:
         unit = int(input("Choose: "))
     except:
@@ -46,12 +44,10 @@ def data_processing(unit):
             ext_processing = dp.m_calc()
             result = ext_processing[0]
             checker = ext_processing[1]
-            days = ext_processing[2]
         elif unit == 1:
             ext_processing = dp.km_calc()
             result = ext_processing[0]
             checker = ext_processing[1]
-            days = ext_processing[2]
         else:
             result = "Bad request!"
         print("The amount to be charged to the customer is US$ {:.2f}".format(result))

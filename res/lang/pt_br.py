@@ -44,12 +44,10 @@ def data_processing(unit):
             ext_processing = dp.m_calc_ptbr()
             result = ext_processing[0]
             checker = ext_processing[1]
-            days = ext_processing[2]
         elif unit == 1:
             ext_processing = dp.km_calc_ptbr()
             result = ext_processing[0]
             checker = ext_processing[1]
-            days = ext_processing[2]
         else:
             result = 'Bad request!'
         print('O valor a ser cobrado ao cliente é de R$ {:.2f}'.format(result))

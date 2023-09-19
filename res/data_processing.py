@@ -58,7 +58,7 @@ def m_calc():
     t.sleep(1.5)
     os.system('cls')
 
-    return op_rental, checker, rented
+    return op_rental, checker
 
 
 def km_calc():
@@ -115,7 +115,7 @@ def km_calc():
     t.sleep(1.5)
     os.system('cls')
 
-    return op_rental, checker, rented
+    return op_rental, checker
 
 
 # PORTUGUESE BR PARAMETERS
@@ -175,7 +175,7 @@ def m_calc_ptbr():
     t.sleep(1.5)
     os.system('cls')
 
-    return op_rental, checker, rented
+    return op_rental, checker
 
 
 def km_calc_ptbr():
@@ -232,4 +232,4 @@ def km_calc_ptbr():
     t.sleep(1.5)
     os.system('cls')
 
-    return op_rental, checker, rented
+    return op_rental, checker
