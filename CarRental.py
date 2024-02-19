@@ -7,10 +7,8 @@ import os
 import time as t
 import res.lang.en_us as english
 import res.lang.pt_br as portuguese
-
-'''
 import emoji
-'''
+
 
 # Time tracking and Selection validator
 start_time = t.time()
@@ -19,7 +17,6 @@ status = 0
 
 
 # Language control:
-
 
 def portuguese_version():
     portuguese.greetings()
@@ -31,16 +28,16 @@ def english_version():
 
 # Language Selection:
 def start_app():
-    print("Please, choose a language:\n 0 - for English\n 1 - for Portuguese (Brazil)")
+    print(emoji.emojize(":globe_showing_americas: Please, choose a language:\n :flag_united_states: 0 - for English\n :flag_brazil: 1 - for Portuguese (Brazil)"))
     try:
         lang = int(input('Choose: '))
     except:
-        print('Invalid, try again.')
+        print(emoji.emojize(':prohibited: Invalid, try again.'))
         lang = ''
 
     while lang == '' or lang not in validator:
         try:
-            lang = int(input('PLEASE, TYPE 0 OR 1, ONLY: '))
+            lang = int(input(emoji.emojize(':warning: PLEASE, TYPE 0 OR 1, ONLY: ')))
         except:
             lang = ''
 
@@ -53,7 +50,7 @@ def start_app():
 # Farewell and Elapsed time calcs
 def finish_app():
     os.system('cls')
-    print('Dedell thanks you, closing program.\nDedell agradece, encerrando programa.')
+    print(emoji.emojize('Dedell thanks you, closing program.\nDedell agradece, encerrando programa. :⊛_pink_heart:'))
 
     end_time = t.time()
     elapsed_time = end_time - start_time
@@ -61,9 +58,9 @@ def finish_app():
     # Time formatting:
     if elapsed_time >= 60:
         minutes = elapsed_time / 60
-        print('elapsed time in minutes: {:.2f}'.format(minutes))
+        print(emoji.emojize(':hourglass_done: elapsed time in minutes: {:.2f}'.format(minutes)))
     else:
-        print('elapsed time in seconds: {:.2f}'.format(elapsed_time))
+        print(emoji.emojize(':hourglass_done: elapsed time in seconds: {:.2f}'.format(elapsed_time)))
 
     t.sleep(2)
     quit()

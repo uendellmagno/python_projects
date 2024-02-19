@@ -3,7 +3,7 @@ import time as t
 import res.data_processing as dp
 import CarRental as main
 
-validator = [0, 1]
+validator = (0, 1)
 
 
 def greetings():
